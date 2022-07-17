@@ -18,7 +18,10 @@ use App\Models\Publication;
 Route::controller(PublicationController::class)->group(function () {
     Route::get('/', 'index');
     Route::any('/pubcreate', 'create');
-    Route::post('/publist', function() {
+    Route::post('/publications', function() {
         return Publication::all();
+    });
+    Route::get('/publication/{id}', function($id) {
+        return view('show', ['publication' => Publication::find($id)]);
     });
 });

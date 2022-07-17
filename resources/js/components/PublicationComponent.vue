@@ -8,15 +8,17 @@
                     <div class="card-body">
                         <table class="table">
                             <tr>
+                                <th>№</th>
                                 <th>Заголовок</th>
                                 <th>Описание</th>
                             </tr>
                             <tr v-for="row in publication">
-                                <td>{{ row.title }}</td>
+                                <td><a v-bind:href="'/publication/' + row.id">{{ row.id }}</a></td>
+                                <td><a v-bind:href="'/publication/' + row.id">{{ row.title }}</a></td>
                                 <td>{{ row.description }}</td>
-                                <td></td>
                             </tr>
                         </table>
+                        <a class="btn btn-link" href="/pubcreate">Создать</a>
                     </div>
                 </div>
             </div>
@@ -35,7 +37,7 @@ import { $dataMetaSchema } from 'ajv'
         data: function () {
             var publication = null;
             $.ajax({
-                url: '/publist',
+                url: '/publications',
                 type: 'post',
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                 dataType: 'json',

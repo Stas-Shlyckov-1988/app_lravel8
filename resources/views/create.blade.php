@@ -23,11 +23,11 @@
                 <form method="POST">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Заголовок</label>
-                        <input type="text" name="title" value="" palceholder="Заголовок" />
+                        <input class="form-control" type="text" name="title" value="" palceholder="Заголовок" />
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Описание</label>
-                        <textarea name="description"></textarea>
+                        <textarea class="form-control" name="description"></textarea>
                     </div>
                     <button class="btn btn-primary mb-3" type="submit">Сохранить</button>
                 </form>
