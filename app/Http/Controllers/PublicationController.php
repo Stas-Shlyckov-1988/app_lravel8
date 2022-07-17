@@ -14,4 +14,9 @@ class PublicationController extends Controller
             'publication' => Publication::all(),
         ]);
     }
+
+    public function create() {
+        
+        return view('create');
+    }
 }

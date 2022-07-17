@@ -14,4 +14,7 @@ use App\Http\Controllers\PublicationController;
 |
 */
 
-Route::get('/', [PublicationController::class, 'index']);
+Route::controller(PublicationController::class)->group(function () {
+    Route::get('/', 'index');
+    Route::any('/pubcreate', 'create');
+});
