@@ -17,7 +17,7 @@ class CreatePublication extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->integer('file_id');
+            $table->integer('file_id')->nullable();
             $table->timestamps();
         });
     }

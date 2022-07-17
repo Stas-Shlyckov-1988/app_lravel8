@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
 
         <title>Создать</title>
 
@@ -21,13 +22,22 @@
             <h1>Создать публикацию</h1>
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <form method="POST">
+                    @csrf <!-- {{ csrf_field() }} -->
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Заголовок</label>
-                        <input class="form-control" type="text" name="title" value="" palceholder="Заголовок" />
+                        <input required maxlegth="200" class="form-control" type="text" name="title" value="" palceholder="Заголовок" />
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Описание</label>
-                        <textarea class="form-control" name="description"></textarea>
+                        <textarea required maxlegth="1000" class="form-control" name="description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Цена</label>
+                        <input required class="form-control" type="text" name="price" value="" palceholder="Цена" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Описание</label>
+                        <input class="form-control" type="file" name="photo" multiple />
                     </div>
                     <button class="btn btn-primary mb-3" type="submit">Сохранить</button>
                 </form>

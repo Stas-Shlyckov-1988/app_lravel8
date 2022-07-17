@@ -14,7 +14,7 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="/css/app.css">
     </head>
     <body class="antialiased">
         <div class="container-xl">
@@ -28,6 +28,10 @@
                 <tr>
                     <td>Заголовок</td>
                     <td>{{ $publication['title'] }}</td>
+                </tr>
+                  <tr>
+                    <td>Цена</td>
+                    <td>{{ $publication['price'] }}</td>
                 </tr>
                 <tr>
                     <td>Описание</td>
