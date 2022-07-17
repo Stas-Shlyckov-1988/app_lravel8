@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicationController;
+use App\Models\Publication;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,7 @@ use App\Http\Controllers\PublicationController;
 Route::controller(PublicationController::class)->group(function () {
     Route::get('/', 'index');
     Route::any('/pubcreate', 'create');
+    Route::post('/publist', function() {
+        return Publication::all();
+    });
 });

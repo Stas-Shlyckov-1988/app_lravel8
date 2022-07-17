@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
 
         <title>Публикации</title>
 
@@ -14,28 +15,13 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
-        <link rel="stylesheet" href="css/app.css">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-    <body class="antialiased">
-        <div class="container-xl">
-            <h1>Публикации</h1>
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <table class="table table-striped-columns">
-                    <tr>
-                        <th>№</th>
-                        <th>Заголовок</th>
-                        <th>Описание</th>
-                    </tr>
-                    @foreach ($publication as $items)
-                        <tr>
-                            <td>{{ $items->id }}</td>
-                            <td>{{ $items->title }}</td>
-                            <td>{{ $items->description }}</td>
-                        </tr>
-                    @endforeach
-                </table>
-            </div>
-            <a class="btn btn-link" href="/pubcreate">Создать</a>
+    <body>
+        
+        <div id="app">
+            <publication-component/>
         </div>
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
