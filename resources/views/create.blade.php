@@ -37,11 +37,13 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Описание</label>
-                        <input class="form-control" type="file" name="photo[]" multiple="multiple" />
+                        <input class="form-control photo_files" type="file" name="photo[]" multiple="multiple" />
                     </div>
-                    <button class="btn btn-primary mb-3" type="submit">Сохранить</button>
+                    <button class="btn btn-primary publication_save mb-3" type="submit">Сохранить</button>
                 </form>
             </div>
         </div>
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
     </body>
 </html>
