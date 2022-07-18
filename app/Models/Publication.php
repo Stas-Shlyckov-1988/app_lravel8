@@ -15,4 +15,10 @@ class Publication extends Model
      * @var string
      */
     protected $table = 'publication';
+
+    public function files($publicationId) {
+        return Files::join('pub_files', 'file_id', '=', 'files.id')
+            ->where('publication_id', $publicationId)
+            ->get();
+    }
 }

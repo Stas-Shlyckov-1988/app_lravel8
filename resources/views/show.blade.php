@@ -37,6 +37,14 @@
                     <td>Описание</td>
                     <td>{{ $publication['description'] }}</td>
                 </tr>
+                <tr>
+                    <td>Фото<td>
+                    <td>
+                        @foreach ($publication->files($publication['id']) as $image)
+                                <img width="30%" class="media-object" src="{{ $image->path }}{{ $image->name }}">
+                        @endforeach
+                    </td>
+                </tr>
             </table>
             </div>
         </div>
