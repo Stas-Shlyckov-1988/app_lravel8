@@ -21,7 +21,7 @@
         <div class="container-xl">
             <h1>Создать публикацию</h1>
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <form method="POST">
+                <form method="POST" enctype="multipart/form-data">
                     @csrf <!-- {{ csrf_field() }} -->
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Заголовок</label>
