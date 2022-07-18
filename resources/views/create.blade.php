@@ -37,7 +37,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Описание</label>
-                        <input class="form-control" type="file" name="photo" multiple />
+                        <input class="form-control" type="file" name="photo[]" multiple="multiple" />
                     </div>
                     <button class="btn btn-primary mb-3" type="submit">Сохранить</button>
                 </form>
