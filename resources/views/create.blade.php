@@ -17,7 +17,8 @@
         </style>
         <link rel="stylesheet" href="css/app.css">
     </head>
-    <body class="antialiased">
+    <body id="fon" class="antialiased">
+
         <div class="container-xl">
             <h1>Создать публикацию</h1>
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
@@ -45,5 +46,19 @@
         </div>
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
+        <script src="/js/three.r119.min.js"></script>
+        <script src="/js/vanta.waves.min.js"></script>
+        <script>
+        VANTA.WAVES({
+            el: "#fon",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
+        })
+        </script>
     </body>
 </html>

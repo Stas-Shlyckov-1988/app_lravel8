@@ -17,13 +17,27 @@
         </style>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-    <body>
-        
-        <div id="app">
+    <body id="fon">
+  
+        <div id="app" style="min-height: 60em;">
             <publication-component/>
             
         </div>
         
         <script src="{{ asset('js/app.js') }}"></script>
+        <script src="/js/three.r119.min.js"></script>
+        <script src="/js/vanta.waves.min.js"></script>
+        <script>
+        VANTA.WAVES({
+            el: "#fon",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
+        })
+        </script>
     </body>
 </html>
