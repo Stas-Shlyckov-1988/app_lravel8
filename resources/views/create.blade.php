@@ -19,7 +19,7 @@
     </head>
     <body id="fon" class="antialiased">
 
-        <div class="container-xl">
+        <div class="container-xl" style="min-height: 55em;">
             <h1>Создать публикацию</h1>
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <form method="POST" enctype="multipart/form-data">

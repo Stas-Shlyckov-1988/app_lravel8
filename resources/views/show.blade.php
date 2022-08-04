@@ -18,7 +18,7 @@
     </head>
     <body id="fon" class="antialiased">
 
-        <div class="container-xl">
+        <div class="container-xl" style="min-height: 55em;">
             <h1>Детальная информация</h1>
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <table class="table">
@@ -39,10 +39,9 @@
                     <td>{{ $publication['description'] }}</td>
                 </tr>
                 <tr>
-                    <td>Фото<td>
                     <td>
                         @foreach ($publication->files($publication['id']) as $image)
-                                <img width="30%" class="media-object" src="{{ $image->path }}{{ $image->name }}">
+                                <img width="30%" class="media-object img-thumbnail" src="{{ $image->path }}{{ $image->name }}">
                         @endforeach
                     </td>
                 </tr>

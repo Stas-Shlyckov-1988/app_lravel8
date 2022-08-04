@@ -3,10 +3,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Список публикаций</div>
+                    <div class="card-header font-monospace">Список публикаций</div>
 
                     <div class="card-body">
-                        <table class="table">
+                        <table class="table table-bordered border-primary">
                             <tr>
                                 <th>№</th>
                                 <th>Заголовок</th>
@@ -18,7 +18,7 @@
                                 <td>{{ row.description }}</td>
                             </tr>
                         </table>
-                        <a class="btn btn-link" href="/pubcreate">Создать</a>
+                        <a class="btn btn-outline-dark" href="/pubcreate">Создать</a>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@
     </head>
     <body id="fon">
   
-        <div id="app" style="min-height: 60em;">
+        <div id="app" style="min-height: 55em;">
             <publication-component/>
             
         </div>

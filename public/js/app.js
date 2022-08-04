@@ -46796,14 +46796,14 @@ var render = function () {
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-8" }, [
         _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
+          _c("div", { staticClass: "card-header font-monospace" }, [
             _vm._v("Список публикаций"),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c(
               "table",
-              { staticClass: "table" },
+              { staticClass: "table table-bordered border-primary" },
               [
                 _vm._m(0),
                 _vm._v(" "),
@@ -46830,7 +46830,10 @@ var render = function () {
             _vm._v(" "),
             _c(
               "a",
-              { staticClass: "btn btn-link", attrs: { href: "/pubcreate" } },
+              {
+                staticClass: "btn btn-outline-dark",
+                attrs: { href: "/pubcreate" },
+              },
               [_vm._v("Создать")]
             ),
           ]),
